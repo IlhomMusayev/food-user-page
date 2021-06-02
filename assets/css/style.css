@@ -1,0 +1,501 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../fonds/Poppins/Poppins-Medium.ttf);
+}
+body {
+    font-family: Poppins;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.sidebar{
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background-color: #2CA062;
+    padding: 30px 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.logo{
+    text-align: center;
+}
+@font-face {
+    font-family: Righteous;
+    src: url(../fonds/Righteous-Regular.ttf);
+}
+.logo-text{
+    font-family: Righteous;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400;
+}
+.user-info{
+    text-align: center;
+    padding: 20px 0;
+}
+.user-img img{
+    min-width: 120px;
+    max-width: 120px;
+    flex-basis: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.sidebar-link{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.list-item{
+    padding: 5px 0;
+}
+.sidebar-link{
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+.active{
+    background-color: #fff;
+    color: #2CA062;
+}
+.sidebar-link h3{
+    padding-left: 10px;
+    font-size: 16px;
+}
+.sidebar-link img{
+    width: 20px;
+}
+.sidebar-link:hover{
+    background-color: #fff;
+    color: #2CA062;
+}
+.user-name h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 0 0 0;
+}
+.status span{
+    color: #fff;
+    font-size: 14px;
+}
+/* Content section */
+
+.content-section{
+    background-color: #f2f2f2;
+    height: 100vh;
+    margin-left: 19%;
+    padding: 20px 20px 20px 40px;
+}
+.header{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    /* height: 50px;     */
+}
+.user-info-bar img{
+    width: 35px;
+    border-radius: 50%;
+}
+.user-name{
+    font-size: 15px;
+    font-weight: 300;
+    padding-left: 10px;
+    color: #555;
+}
+.settings-items, .settings-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-info-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+.search-menu{
+    position: relative;
+}
+.search-menu img{
+    position: absolute;
+    width: 40px;
+    top: 50%;
+    left: 0%;
+    transform: translate(-0%, -50%);
+    background-color: rgb(44, 160, 98, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+.search-input{
+    padding: 12px 12px 12px 50px;
+    background-color: rgb(44, 160, 98, 0.1);
+    color: #aaa;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+}
+.search-input::placeholder{
+    color: #aaa;
+}
+.search-input:focus{
+    outline: none;
+}
+.item{
+    padding: 0 15px;
+}
+.item a img{
+    width: 22px;
+}
+/* order-section */
+
+.order-section{
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    background-color: #fff;
+    width: 22%;
+    height: 90vh;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.order-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.order-title h2{
+    font-size: 20px;
+    color: #333;
+}
+.order-title a{
+    color: #2CA062;
+}
+.order-info{
+    padding: 5px 0;
+}
+.order-item{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5px 0;
+}
+.order-info-icon{
+    width: 30px;
+    padding: 8px;
+    background-color:  rgb(44, 160, 98, 0.1);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.order-info-text{
+    font-size: 16px;
+    color: #555;
+    font-weight: 300;
+}
+.my-order-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-order-name{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.order-img img{
+    width:  60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.order-count{
+    padding-left: 10px;
+}
+.order-count h4{
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+}
+.order-count-btn{
+    border-radius: 15px;
+    border: 1px solid #2CA062;
+    padding: 0 10px;
+}
+.order-count-btn button{
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+.order-count-btn span{
+    font-size: 14px;
+    padding: 0 5px;
+}
+.order-price{
+    display: flex;
+    justify-content: right;
+    align-items: top;
+}
+.price{
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+.remove-product{
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 10px;
+    padding: 0;
+}
+.my-order-products{
+    padding: 15px 0;
+}
+.scrollbar
+{
+	height: 25vh;
+	width: 100%;
+	/* background: #F5F5F5; */
+	overflow-y: scroll;
+}
+.scrollbar-content{
+    height: 90vh;
+	overflow-y: scroll;
+}
+.force-overflow
+{
+
+}
+
+
+#style-1::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1);
+	background-color: #f2f2f2;
+}
+/* card */
+
+.card{
+    position: relative;
+    background-color: #14894A ;
+    background-image: url(../img/Rectangle\ Copy\ 11.png);
+    background-repeat: no-repeat; 
+    background-position-x: 100%;
+    background-size: 60%;
+    width: 100%;
+    height: 130px;
+    border-radius: 15px;
+
+}
+.card-icon{
+    position: absolute;
+    top: 12%;
+    right: 10%;
+    width: 50px;
+}
+.card-starus{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 23px;
+}
+.total-count{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.chechout-btn button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: #2CA062;
+    color: #fff;
+    font-size: 16px;
+}
+.chechout-btn button:hover{
+    transition: 0.3s;
+    background-color: #14894A;
+}
+/* content-main */
+.content-main{
+    width: 70%;
+}
+.title h1{
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+.food-img img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    opacity: 0.8;
+}
+.foods-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.food-item:hover .food-img img{
+    transition: 0.4s;
+    opacity: 1;
+}
+.food-item:hover{
+    box-shadow: 0px 0px 50px rgb(0,0,0,0.2);
+}
+.food-item{
+    cursor: pointer;
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 5px 10px 10px 0;
+    
+}
+.food-name{
+    padding: 10px;
+}
+.food-name h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+}
+.food-name p{
+    font-size: 12px;
+    color: #666;
+}
+.today-top-foods{
+    padding: 10px 0;
+}
+.food-name p img{
+    width: 80px;
+}
+.food-price{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.food-price span{
+    background-color: #2CA062;
+    color: #fff;
+    font-size: 13px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+/* Modal */
+.food-modal{
+    display: none;
+    background-color: #666;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+}
+.modal-food{
+    position: relative;
+}
+.food-item-modal{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 300px;
+    margin: auto;
+}
+.food-img-madal img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.food-price-modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.food-info-modal{
+    padding: 15px;
+}
+.add-based{
+    cursor: pointer;
+    background-color: #2CA062;
+    border: none;
+    padding: 8px 25px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.add-based:hover{
+    background-color: #14894A;
+    transition: 0.3s;
+}
+.food-info-modal h2{
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+.food-price-item{
+    font-weight: 600;
+    color: #333;
+}
+.close-btn{
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    right: 7%;
+}
