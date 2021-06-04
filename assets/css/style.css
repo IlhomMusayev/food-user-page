@@ -203,6 +203,7 @@ body {
     color: #333;
 }
 .order-title a{
+    cursor: pointer;
     color: #2CA062;
 }
 .order-info{
@@ -225,6 +226,10 @@ body {
     font-size: 16px;
     color: #555;
     font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 70%;
 }
 .my-order-item{
     display: flex;
@@ -242,6 +247,9 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
+#food1, #food2, #food3, #food4{
+    display: none;
+}
 .order-count{
     padding-left: 10px;
 }
@@ -249,11 +257,16 @@ body {
     font-size: 16px;
     color: #333;
     font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
 }
 .order-count-btn{
     border-radius: 15px;
     border: 1px solid #2CA062;
     padding: 0 10px;
+    display: inline
 }
 .order-count-btn button{
     cursor: pointer;
@@ -286,6 +299,7 @@ body {
     padding: 0;
 }
 .my-order-products{
+    position: relative;
     padding: 15px 0;
 }
 .scrollbar
@@ -377,7 +391,7 @@ body {
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .foods-items{
     display: flex;
@@ -385,14 +399,14 @@ body {
     justify-content: space-between;
 
 }
-.food-item:hover .food-img img{
+.food-item:hover, .food-catalog:hover .food-img img{
     transition: 0.4s;
     opacity: 1;
 }
-.food-item:hover{
+.food-item:hover, .food-catalog:hover{
     box-shadow: 0px 0px 50px rgb(0,0,0,0.2);
 }
-.food-item{
+.food-item, .food-catalog{
     cursor: pointer;
     position: relative;
     background-color: #fff;
@@ -444,10 +458,20 @@ body {
     opacity: 0.4;
 }
 .modal-food{
-    position: relative;
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px; Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 .food-item-modal{
-    display: none;
+    /* display: none;  */
     z-index: 1;
     position: absolute;
     top: 50%;
@@ -498,4 +522,92 @@ body {
     position: absolute;
     top: 5%;
     right: 7%;
+}
+/* edit-order-input */
+.edit-order-info{
+    border-radius: 15px;
+    border: 1px solid #2CA062;
+    background-color: #fefefe;
+    margin: 100px auto;
+    padding: 30px;
+    width: 30%;
+}
+.order-title{
+    color: #2CA062;
+}
+.edit-order button, textarea{
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.save-btn{
+    background-color: #2CA062;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.save-btn:hover{
+    transition: 0.3s;
+    background-color: #14894A;
+}
+.edit-order textarea{
+    border: 2px solid #2CA062;
+    border-radius: 10px;
+}
+.edit-order-madal{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* padding-top: 100px; Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.order-close-btn{
+    cursor: pointer;
+}
+.get-geolocation{
+    background: #fff;
+    border: 2px solid #2CA062;
+    border-radius: 10px;
+    color: #2CA062;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.get-geolocation{
+    
+}
+.Error{
+    color: #2CA062;
+    font-size: 16px;
+    font-weight: 400;
+}
+.dive{
+    /* display: none; */
+}
+.dive span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    width: 100%;
+    font-weight: 100;
+    text-align: center;
+    color: #999;
 }
